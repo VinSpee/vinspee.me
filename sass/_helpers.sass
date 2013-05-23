@@ -1,0 +1,71 @@
+=placeholder($color)
+	&.placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+
+%visually-hidden
+	border: 0
+	clip: rect(0 0 0 0)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute
+	width: 1px
+
+%visible
+	width: auto
+	clip: none
+	margin: 0
+	position: relative
+	height: auto
+
+=hide
+	@extend %visually-hidden
+=unhide
+	@extend %visible
+
+=fade
+	@extend %fade
+
+=push
+	@extend %push
+
+=round
+	@extend %round
+
+%fade
+	+transition(color .25s ease-in-out, background .25s ease-in-out, transform .2s ease-in-out)
+
+.unhide
+	+unhide
+
+%pad-grid
+	padding-top: inherit
+	padding-right: $grid-padding / 2
+	padding-bottom: inherit
+	padding-left:  $grid-padding / 2
+	margin-top: inherit
+	margin-right: 0 - $grid-padding / 1.8
+	margin-bottom: inherit
+	margin-left: 0 - $grid-padding / 1.8
+
+=full-width
+	@extend %pad-grid
+
+=anchored($color: $base0, $font-size: ms(0))
+	+box-shadow(0 .15em 0 0 $color)
+	+trailer(1, $font-size)
+
+=inner-module($color: $base11)
+	text-align: center
+	color: $color
+	+box-shadow(0 .11em 0 0 $color, 0 -.1em 0 0 $color)
+
+=selected($color: black, $background: white)
+	::-moz-selection, ::selection
+		background: $background
+		color: $color

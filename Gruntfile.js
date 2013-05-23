@@ -30,8 +30,8 @@ module.exports = function (grunt) {
       },
       js: {
         files: [
-          'js/{,**/}*.js',
-          '!js/{,**/}*.min.js'
+          'scripts/{,**/}*.js',
+          '!scripts/{,**/}*.min.js'
         ],
         tasks: ['jshint', 'uglify:dev']
       },
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         tasks: ['copy:dev']
       },
       css: {
-        files: ['sass/{,**/}*.scss'],
+        files: ['sass/{,**/}*.sass'],
         tasks: ['compass:dev']
       }
     },
@@ -94,8 +94,8 @@ module.exports = function (grunt) {
       dev: {
         options: {
           imagesDir: '.www/images',
-          cssDir: '.www/css',
-          javascriptsDir: '.www/js',
+          cssDir: '.www/styles',
+          javascriptsDir: '.www/scripts',
           fontsDir: '.www/fonts',
           environment: 'development'
         }
@@ -103,8 +103,8 @@ module.exports = function (grunt) {
       dist: {
         options: {
           imagesDir: '.dist/images',
-          cssDir: '.dist/css',
-          javascriptsDir: '.dist/js',
+          cssDir: '.dist/styles',
+          javascriptsDir: '.dist/scripts',
           fontsDir: '.dist/fonts',
           environment: 'production',
           force: true
@@ -117,8 +117,8 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       all: [
-        'js/{,**/}*.js',
-        '!js/{,**/}*.min.js'
+        'scripts/{,**/}*.js',
+        '!scripts/{,**/}*.min.js'
       ]
     },
 
@@ -158,7 +158,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'js',
           src: ['**/*.js', '!**/*.min.js'],
-          dest: '.www/js',
+          dest: '.www/scripts',
           ext: '.min.js'
         }]
       },
@@ -171,7 +171,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'js',
           src: ['**/*.js', '!**/*.min.js'],
-          dest: '.dist/js',
+          dest: '.dist/scripts',
           ext: '.min.js'
         }]
       }

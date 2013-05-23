@@ -1,0 +1,37 @@
++font-face('icon', font-files('ehm-icons.woff', woff, 'ehm-icons.ttf', ttf, 'ehm-icons.svg', svg), 'ehm-icons.eot')
+
+%icon
+	speak: none
+	/* Enable Ligatures */
+	-webkit-font-feature-settings: "liga","dlig"
+	-moz-font-feature-settings: "liga=1, dlig=1"
+	-moz-font-feature-settings: "liga","dlig"
+	-ms-font-feature-settings: "liga","dlig"
+	-o-font-feature-settings: "liga","dlig"
+	font-feature-settings: "liga","dlig"
+	text-rendering: optimizeLegibility
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	font-family: "icon", "proxima-nova", Gotham, sans-serif
+
+%headline
+	font-family: "jubilat", sans-serif
+	font-weight: 500
+
+%bodytext
+	font-family: "omnes-pro", sans-serif
+
+%monospaced
+	font-family: "source-code-pro", courier, monospace
+	font-weight: 300
+
+// Icons
+
+[data-icon]:before
+	//font-family: 'yourfont'
+	content: attr(data-icon)
+	margin-right: 0.75em
+	+inline-block
+	-webkit-font-smoothing: antialiased

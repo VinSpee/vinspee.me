@@ -1,0 +1,34 @@
+body
+	@extend %bodytext
+	+adjust-font-size-to(ms(0))
+	+container
+	background: $base1
+	+background-size(cover)
+	color: $base0
+	+susy-grid-background
+	+at-breakpoint(48em 8)
+		+susy-grid-background
+		+set-container-width
+
+.content
+	max-width: 26.6875em
+	margin: 0 auto
+	text-align: left
+
+.content--layout
+	text-align: center
+
+.content--layout::after
+	@extend %headline
+	+adjust-font-size-to(ms(5))
+	color: transparentize($base01, .9)
+	content: "ƒ"
+	font-weight: 900
+	font-style: italic
+
+
+
+@import base/scrollbars
+@import base/headlines
+@import base/copy
+@import base/forms

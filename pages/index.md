@@ -7,7 +7,7 @@
 
 My name is [Vince Speelman](http://facebook.com/vinspee) I'm a front-end developer from Detroit, Michigan that loves moving the web forward. My weapons of choice are CSS, HTML, and JavaScript. I also love pre-processors (Sass, CoffeeScript) good tools (Vim, TMUX, Git, LiveReload), and people who care.
 
-I'm all about responsive web design, unwavering semantics, and modular code. I've created experiences for [multi-billion dollar financial institutions](http://myql.com), [teen pop idols](http://allisimpson.com), [anti-bullying movements](http://cl.ly/image/08333O320w0L), [government organizations](http://www.ptacsofmichigan.org/), and [musical revolutions](http://dribbble.com/vinspee/projects/131382-EHM).
+I'm all about responsive web design, unwavering semantics, and modular code. I've created [responsive web apps for multi-billion dollar financial institutions](http://myql.com), [social communities for teen pop idols](http://allisimpson.com), [socially aware movements for anti-bullying campaigns](http://cl.ly/image/08333O320w0L), [accessible sites for government organizations](http://www.ptacsofmichigan.org/), and [platforms for musical revolutions](http://dribbble.com/vinspee/projects/131382-EHM).
 
 I [ship code outside of my day job](https://github.com/VinSpee) and I [fight for what's right](https://github.com/quickenloans) inside of it. User experience is *king*. Accesibility and interoperability must not be an afterthought. Progressive enhancement is a mantra.
 

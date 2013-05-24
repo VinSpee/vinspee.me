@@ -14,3 +14,9 @@ I [ship code outside of my day job](https://github.com/VinSpee) and I [fight for
 Off-screen, I'm a musician, coffee and beer snob, food lover, and wannabe chef.
 
 [Let's get to know eachother.](mailto:v@vinspee.me) You can [follow me](http://twitter.com/vinspee) if you'd like a never-ending stream of GIFs and geekery, sprinkled with a healthy dose of consipracy theories and civil disobedience.
+
+## Previously at
+
+- [Curve Detroit](http://curvedetroit.com) (October 2009&mdash;October 2011)
+- [AAMZ The Studios](http://aamzstudios.com) (October 2011&mdash;September 2012)
+- [Quicken Loans](http://quickenloans.com) (September 2012&mdash;Present)

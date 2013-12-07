@@ -19,4 +19,8 @@ Off-screen, I'm a musician, coffee and beer snob, food lover, and wannabe chef.
 
 - [Curve Detroit](http://curvedetroit.com) (October 2009&mdash;October 2011)
 - [AAMZ The Studios](http://aamzstudios.com) (October 2011&mdash;September 2012)
-- [Quicken Loans](http://quickenloans.com) (September 2012&mdash;Present)
+- [Quicken Loans](http://quickenloans.com) (September 2012&mdash;October 2013)
+
+## Currently at
+
+- [Level Eleven](http://leveleleven.com) (October 2013&mdash;Current)

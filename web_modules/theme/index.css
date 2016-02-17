@@ -1,0 +1,33 @@
+/** @define Theme */
+
+:root {
+	--Theme-color--red : #ff4136;
+	--Theme-color--black: #111111;
+	--Theme-color--white: #efefef;
+	--Theme-font--headline: "vortice-concept";
+	--Theme-font--body: "source-serif-pro";
+}
+
+.Theme-fg--red {
+	color: var(--Theme-color--red);
+}
+
+.Theme-fg--black {
+	color: var(--Theme-color--black);
+}
+
+.Theme-fg--white {
+	color: var(--Theme-color--white);
+}
+
+.Theme-bg--red {
+	background-color: var(--Theme-color--red);
+}
+
+.Theme-bg--black {
+	background-color: var(--Theme-color--black);
+}
+
+.Theme-bg--white {
+	background-color: var(--Theme-color--white);
+}

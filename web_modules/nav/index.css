@@ -1,0 +1,10 @@
+/** @define Nav */
+
+:root {
+	--Nav-border: 1px solid;
+}
+
+.Nav-action {
+	border-right: var(--Nav-border);
+	border-top: var(--Nav-border);
+}

@@ -1,0 +1,59 @@
+/** @define Border */
+
+:root {
+	--Border-color--light: white;
+	--Border-weight--xs: 1px;
+	--Border-weight--sm: 2px;
+	--Border-weight--md: 3px;
+	--Border-weight--lg: 5px;
+	--Border-weight--xl: 10px;
+}
+
+.Border {
+	border-color: currentColor;
+	border-style: solid;
+}
+
+.Border-color--light {
+	border-color: color(var(--Border-color--light) a(50%));
+}
+
+.Border-top {
+	border-width: 0 !important;
+	border-top: inherit;
+}
+
+.Border-bottom {
+	border-width: 0 !important;
+	border-bottom: inherit;
+}
+
+.Border-left {
+	border-width: 0 !important;
+	border-left: inherit;
+}
+
+.Border-right {
+	border-width: 0 !important;
+	border-right-width: inherit;
+}
+
+.Border-weight--xs {
+	border-width: var(--Border-weight--xs);
+}
+
+.Border-weight--sm {
+	border-width: var(--Border-weight--sm);
+}
+
+.Border-weight--md {
+	border-width: var(--Border-weight--md);
+}
+
+.Border-weight--lg {
+	border-width: var(--Border-weight--lg);
+}
+
+.Border-weight--xl {
+	border-width: var(--Border-weight--xl);
+}

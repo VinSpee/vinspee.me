@@ -1,0 +1,100 @@
+@import "theme";
+@import "nav";
+@import "suitcss-utils-flex";
+@import "suitcss-utils-text";
+@import "suitcss-components-grid";
+@import "sanitize.css/sanitize.css";
+@import "blank-css-type";
+@import "blank-css-space";
+
+:root {
+	--Theme-color--red: #ff4136;
+	--Theme-color--black: #111;
+	--Theme-color--white: #efefef;
+	--Theme-font--headline: "vortice-concept";
+	--Theme-font--body: "source-serif-pro";
+
+	--Type-size--xxs: ms(0)rem;
+	--Type-size--xs: ms(1)rem;
+	--Type-size--sm: ms(2)rem;
+	--Type-size--md: 2rem;
+	--Type-size--lg: 3rem;
+	--Type-size--xl: 4rem;
+	--Type-size--xxl: 6rem;
+
+	--Type-height--xs: 1;
+	--Type-height--sm: 1.25;
+	--Type-height--md: 1.5;
+	--Type-height--lg: 2;
+	--Type-height--xl: 3;
+
+	--Type-space--sm: 0.2em;
+	--Type-space--md: normal;
+	--Type-space--lg: 0.5em;
+
+	--Type-weight--extralight: 200;
+	--Type-weight--light: 300;
+	--Type-weight--normal: 400;
+	--Type-weight--bold: 600;
+	--Type-weight--heavy: 700;
+
+	--space-n: 0;
+	--space-xs: 0.125rem;
+	--space-sm: 0.25rem;
+	--space-md: 0.5rem;
+	--space-lg: 1rem;
+	--space-xl: 2rem;
+
+	--Border-color--light: var(--Theme-color--white);
+
+	--root-background-color: var(--Theme-color--red);
+	--font-family: var(--Theme-font--body);
+	background-color: var(--Theme-color--white);
+	color: var(--Theme-color--white);
+
+	/*
+	 * --root-cursor: ;
+	 * --root-font-size: ;
+	 * --root-line-height: ;
+	 * --anchor-text-decoration: ;
+	 * --background-repeat: ;
+	 * --form-element-background-color: ;
+	 * --form-element-min-height: ;
+	 * --media-element-vertical-align: ;
+	 * --monospace-font-family: ;
+	 * --nav-list-style: ;
+	 * --selection-background-color: ;
+	 * --selection-color: ;
+	 * --selection-text-shadow: ;
+	 * --small-font-size: ;
+	 * --table-border-collapse: ;
+	 * --table-border-spacing: ;
+	 * --textarea-resize: ;
+	 */
+}
+
+@custom-media --xs (min-width: 22rem);
+@custom-media --sm (min-width: 29rem);
+@custom-media --md (min-width: 36rem);
+@custom-media --lg (min-width: 45rem);
+@custom-media --xl (min-width: 54rem);
+@custom-selector :--headings h1, h2, h3, h4, h5, h6; /* for .markdownIt-Anchor */
+
+:--headings {
+	position: relative;
+}
+
+.markdownIt-Anchor {
+	position: absolute;
+	left: -1.5rem;
+	opacity: 0.1;
+	transition: opacity 0.2s;
+
+	@nest :--headings:hover & {
+		opacity: 1;
+	}
+}
+
+a {
+	color: inherit;
+}

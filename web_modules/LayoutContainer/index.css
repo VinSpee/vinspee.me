@@ -1,22 +1,34 @@
+@import "normalize-opentype.css/normalize-opentype.css";
 @import "theme";
 @import "nav";
+@import "suitcss-utils-display";
 @import "suitcss-utils-flex";
+@import "suitcss-utils-size";
 @import "suitcss-utils-text";
 @import "suitcss-components-grid";
 @import "sanitize.css/sanitize.css";
 @import "blank-css-type";
 @import "blank-css-space";
+@import "suitcss-depth";
+@import "content";
+@import "brandbug";
 
 :root {
-	--Theme-color--red: #ff4136;
-	--Theme-color--black: #111;
-	--Theme-color--white: #efefef;
-	--Theme-font--headline: "vortice-concept";
-	--Theme-font--body: "source-serif-pro";
+	--ms-bases: 1;
+	--ms-ratios: 1.4;
 
-	--Type-size--xxs: ms(0)rem;
-	--Type-size--xs: ms(1)rem;
-	--Type-size--sm: ms(2)rem;
+	--BrandBug-bg: color(var(--Theme-color--white) tint(66.6666%));
+	--BrandBug-fg: var(--Theme-color--red);
+
+	--Content-width: ms(10)rem;
+	--Content-h1Height: ms(2)rem;
+	--Content-h1Color: var(--Theme-color--red);
+	--Content-linkColor: var(--Theme-color--blue);
+	--Content-dropCapColor: color(var(--Theme-color--black) tint(25%));
+
+	--Type-size--xxs: ms(-1)rem;
+	--Type-size--xs: ms(0)rem;
+	--Type-size--sm: ms(1)rem;
 	--Type-size--md: 2rem;
 	--Type-size--lg: 3rem;
 	--Type-size--xl: 4rem;
@@ -34,54 +46,57 @@
 
 	--Type-weight--extralight: 200;
 	--Type-weight--light: 300;
-	--Type-weight--normal: 400;
+	--Type-weight--medium: 400;
 	--Type-weight--bold: 600;
 	--Type-weight--heavy: 700;
 
 	--space-n: 0;
-	--space-xs: 0.125rem;
-	--space-sm: 0.25rem;
-	--space-md: 0.5rem;
-	--space-lg: 1rem;
-	--space-xl: 2rem;
+	--space-xs: ms(-3)rem;
+	--space-sm: ms(-2)rem;
+	--space-md: ms(-1)rem;
+	--space-lg: ms(0)rem;
+	--space-xl: ms(3)rem;
 
-	--Border-color--light: var(--Theme-color--white);
+	--Nav-action--color: var(--Theme-color--red);
+	--Nav-border--width: ms(-7)rem;
+	--Nav-border--style: solid;
+	--Nav-border--color: color(var(--Theme-color--red) shade(15%));
 
-	--root-background-color: var(--Theme-color--red);
+	--root-background-color: var(--Theme-color--white);
 	--font-family: var(--Theme-font--body);
-	background-color: var(--Theme-color--white);
-	color: var(--Theme-color--white);
-
-	/*
-	 * --root-cursor: ;
-	 * --root-font-size: ;
-	 * --root-line-height: ;
-	 * --anchor-text-decoration: ;
-	 * --background-repeat: ;
-	 * --form-element-background-color: ;
-	 * --form-element-min-height: ;
-	 * --media-element-vertical-align: ;
-	 * --monospace-font-family: ;
-	 * --nav-list-style: ;
-	 * --selection-background-color: ;
-	 * --selection-color: ;
-	 * --selection-text-shadow: ;
-	 * --small-font-size: ;
-	 * --table-border-collapse: ;
-	 * --table-border-spacing: ;
-	 * --textarea-resize: ;
-	 */
+	--root-color: var(--Theme-color--black);
+	--root-font-size: 125%;
+	--root-line-height: 1.5;
+	--anchor-text-decoration: none;
+	--background-repeat: none;
+	--form-element-background-color: var(--Theme-color--white);
+	--form-element-min-height: ms(0)em;
+	--media-element-vertical-align: middle;
+	--monospace-font-family: mono;
+	--nav-list-style: none;
+	--selection-background-color: var(--Theme-color--red);
+	--selection-color: var(--Theme-color--white);
+	--selection-text-shadow: none;
+	--small-font-size: var(--Type-size--xxs);
+	--table-border-collapse: none;
+	--table-border-spacing: none;
+	--textarea-resize: vertical;
 }
 
 @custom-media --xs (min-width: 22rem);
 @custom-media --sm (min-width: 29rem);
+@custom-media --sm-viewport (min-width: 29rem);
 @custom-media --md (min-width: 36rem);
+@custom-media --md-viewport (min-width: 36rem);
 @custom-media --lg (min-width: 45rem);
+@custom-media --lg-viewport (min-width: 45rem);
 @custom-media --xl (min-width: 54rem);
 @custom-selector :--headings h1, h2, h3, h4, h5, h6; /* for .markdownIt-Anchor */
 
 :--headings {
 	position: relative;
+	font-family: var(--Theme-font--headline);
+	line-height: 1.125;
 }
 
 .markdownIt-Anchor {
@@ -97,4 +112,17 @@
 
 a {
 	color: inherit;
+}
+
+ol {
+	list-style-type: none;
+}
+
+.Border-bottom--md {
+	border: 0;
+	border-bottom: .125em solid currentColor;
+}
+
+.Border--subtle {
+	border-color: color(var(--Theme-color--white) shade(20%));
 }

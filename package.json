@@ -4,7 +4,7 @@
   "homepage": "http://vinspee.me",
   "scripts": {
     "statinamic": "cross-env BABEL_ENV=statinamic DEBUG=statinamic:* babel-node scripts/build",
-    "start": "npm run statinamic -- --server --open --dev",
+    "start": "npm run statinamic -- --server --dev",
     "build": "npm run statinamic -- --static --production"
   },
   "statinamic": {
@@ -36,16 +36,31 @@
       "airbnb"
     ],
     "rules": {
-      "indent": [2, "tab", {"SwitchCase": 1}],
-      "react/jsx-curly-spacing": [2, "always"],
-      "react/jsx-indent-props": [2, "tab"],
+      "indent": [
+        2,
+        "tab",
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "semi": [
+        2,
+        "never"
+      ],
+      "react/jsx-curly-spacing": [
+        2,
+        "always"
+      ],
+      "react/jsx-indent-props": [
+        2,
+        "tab"
+      ],
       "react/jsx-key": 2
     }
   },
   "stylelint": {
     "extends": "stylelint-selector-bem-pattern",
     "rules": {
-      "function-whitespace-after": "never",
       "indentation": "tab"
     }
   },
@@ -75,6 +90,7 @@
     "json-loader": "^0.5.2",
     "markdown-it": "^5.0.0",
     "markdown-it-toc-and-anchor": "^1.0.1",
+    "normalize-opentype.css": "^0.2.4",
     "postcss-browser-reporter": "^0.4.0",
     "postcss-cssnext": "^2.4.0",
     "postcss-import": "^8.0.2",
@@ -101,7 +117,10 @@
     "stylelint-config-standard": "^2.0.0",
     "stylelint-selector-bem-pattern": "^0.2.1",
     "suitcss-components-grid": "^3.0.2",
+    "suitcss-depth": "^0.3.1",
+    "suitcss-utils-display": "^1.0.1",
     "suitcss-utils-flex": "^1.1.1",
+    "suitcss-utils-size": "^1.0.2",
     "suitcss-utils-text": "^1.0.0",
     "webpack": "^1.12.1",
     "whatwg-fetch": "^0.9.0"

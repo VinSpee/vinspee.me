@@ -1,0 +1,16 @@
+/** @define BrandBug */
+
+:root {
+	--BrandBug-bg: white;
+	--BrandBug-fg: red;
+}
+
+.BrandBug {
+	background-color: var(--BrandBug-bg);
+	transition: transform .1s linear;
+	transform: scale3d(1, 1, 1);
+	@nest &:hover {
+		transform: scale3d(1.01, 1.01, 1.01);
+		transition: transform .15s linear;
+	}
+}

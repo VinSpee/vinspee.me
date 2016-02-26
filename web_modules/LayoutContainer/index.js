@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { PropTypes } from 'react';
-import Helmet from 'react-helmet';
+import React, { Component } from 'react'
+import { PropTypes } from 'react'
+import Helmet from 'react-helmet'
 
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../Header'
+import Footer from '../Footer'
 
-import './index.css';
+import './index.css'
 
 export default class Layout extends Component {
 
@@ -22,12 +22,12 @@ export default class Layout extends Component {
 
 	render() {
 		try {
-			window.Typekit.load();
+			window.Typekit.load()
 		} catch (e) {
-			console.log(e);
+			console.log(e)
 		}
 
-		const { pkg } = this.context.metadata;
+		const { pkg } = this.context.metadata
 
 		return (
 		<div>
@@ -37,13 +37,15 @@ export default class Layout extends Component {
 					{ name: 'twitter:site', content: `@${ pkg.twitter }` },
 				] }
 			/>
-			<Header />
-			<div>
+			<div className="blank-u-mgBlg blank-u-md-mgBxl">
+				<Header />
+			</div>
+			<div className="Content blank-u-pdHmd">
 				{ this.props.children }
 			</div>
 			<Footer />
 			<script src="//use.typekit.net/apc4qof.js"></script>
 		</div>
-	);
+	)
 	}
 }

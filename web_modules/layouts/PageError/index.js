@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { PropTypes } from 'react';
+import React, { Component } from 'react'
+import { PropTypes } from 'react'
 
 export default class PageError extends Component {
 
@@ -12,13 +12,13 @@ export default class PageError extends Component {
 		const {
 			error,
 			errorText,
-		} = this.props;
+		} = this.props
 
 		return (
 			<div>
 				<h1>{ error }</h1>
 				<p>{ errorText }</p>
 			</div>
-		);
+		)
 	}
 }

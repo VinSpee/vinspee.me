@@ -1,10 +1,82 @@
 /** @define Nav */
 
 :root {
-	--Nav-border: 1px solid;
+	--Nav-action--color: red;
+	--Nav-border--width: 1px;
+	--Nav-border--style: solid;
+	--Nav-border--color: var(--Theme-color--white);
+	--Nav-border: var(--Nav-border--width) var(--Nav-border--style) var(--Nav-border--color);
+	--Nav-action--interactionColor: var(--Nav-border--color);
+}
+
+@custom-selector :--Nav-actionStates .Nav-action:hover, .Nav-action:focus, .Nav-action:active;
+
+.Nav {
+	background-image:
+		linear-gradient(
+			color(
+				var(--Nav-action--color)
+				a(85%)
+				tint(5%)
+				saturation(150%)
+			),
+			color(
+				var(--Nav-action--color)
+				a(85%)
+				tint(5%)
+				saturation(150%)
+			)
+		),
+		url("http://media4.giphy.com/media/yBT2Wcz2qDqfe/giphy.gif");
+		background-size: cover;
+
 }
 
 .Nav-action {
+	background-image:
+		linear-gradient(
+			to bottom,
+			color(white a(8%)),
+			color(white a(0%))
+		),
+		linear-gradient(
+			color(
+				var(--Nav-action--color)
+				a(85%)
+				tint(5%)
+				saturation(150%)
+			),
+			color(
+				var(--Nav-action--color)
+				a(85%)
+				tint(5%)
+				saturation(150%)
+			)
+		),
+			url("http://media4.giphy.com/media/yBT2Wcz2qDqfe/giphy.gif");
+	;
+	background-size: cover;
 	border-right: var(--Nav-border);
 	border-top: var(--Nav-border);
+	border-bottom: var(--Nav-border);
+	cursor: pointer;
+	@nest .Nav-item:last-of-type & {
+		border-right: 0;
+	}
+	@media(--sm-viewport) {
+		background: none;
+		border: 0;
+		box-shadow: 1px 0 0 color(var(--Nav-border--color) a(100%));
+	}
+}
+
+:--Nav-actionStates {
+	/* border-color: transparent; */
+	background-color: var(--Nav-action--interactionColor);
+	box-shadow: inset 0 0 .33rem 1px color(var(--Nav-action--interactionColor) shade(50%));
+	text-shadow: 0 0 .5em color(var(--Nav-border--color) shade(33%));
+	transition: box-shadow .1s linear, background-color .1s linear;
+	@media(--sm-viewport) {
+		box-shadow: 1px 0 0 color(var(--Nav-border--color) a(100%));
+	}
 }

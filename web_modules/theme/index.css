@@ -2,8 +2,11 @@
 
 :root {
 	--Theme-color--red : #ff4136;
+	--Theme-color--blue: #464779;
 	--Theme-color--black: #111111;
 	--Theme-color--white: #efefef;
+	--Theme-color--ted: #D74B35;
+	--Theme-color--bankrate: #3E7BD5;
 	--Theme-font--headline: "vortice-concept";
 	--Theme-font--body: "source-serif-pro";
 }
@@ -30,4 +33,8 @@
 
 .Theme-bg--white {
 	background-color: var(--Theme-color--white);
+}
+
+.Theme-bg--bankrate {
+	background-color: var(--Theme-color--bankrate);
 }

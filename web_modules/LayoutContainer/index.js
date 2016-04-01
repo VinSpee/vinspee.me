@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
+import ScriptsBlock from "ScriptsBlock"
 import "tachyons/src/tachyons.css"
 import "app/index.css"
 
-import Header from "../Header"
-import Footer from "../Footer"
+import Header from "Header"
+import Footer from "Footer"
 
 export default class Layout extends Component {
 
@@ -22,24 +23,19 @@ export default class Layout extends Component {
     } = this.context.metadata
 
     return (
-      <div className="serif bg-white vh-100">
+      <div className="serif bg-white vh-100 f4">
         <Helmet
           meta={ [
             { property: "og:site_name", content: pkg.name },
             { name: "twitter:site", content: `@${ pkg.twitter }` },
           ] }
-          script={ [
-            { "src": "//use.typekit.net/apc4qof.js" },
-            { innerHTML: `
-              try{Typekit.load({ async: true });}catch(e){}
-            ` },
-          ] }
         />
         <Header />
-        <div>
+        <div className="ph3">
           { this.props.children }
         </div>
         <Footer />
+        <ScriptsBlock />
       </div>
     )
   }

@@ -1,9 +1,30 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 import invariant from "invariant"
+import Panels from "Panels"
+import TEDLogo from "logos/ted-logo.svg"
+import BankrateLogo from "logos/bankrate-logo.svg"
+import MyQLLogo from "logos/quicken-loans-logo.svg"
 
-export default class Page extends Component {
+const workItems = [
+  {
+    label: "TED",
+    linkURL: "http://ted.com",
+    imageURL: TEDLogo,
+  },
+  {
+    label: "Bankrate",
+    linkURL: "http://www.bankrate.com/funnel/personal-loans/",
+    imageURL: BankrateLogo,
+  },
+  {
+    label: "Quicken Loans",
+    linkURL: "http://www.quickenloans.com/",
+    imageURL: MyQLLogo,
+  },
+]
 
+export default class IndexLayout extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
     __filename: PropTypes.string.isRequired,
@@ -62,10 +83,12 @@ export default class Page extends Component {
         }
         {
           body &&
-          <div
-            className="mw6"
-            dangerouslySetInnerHTML={ { __html: body } }
-          />
+          <div>
+            <div
+              dangerouslySetInnerHTML={ { __html: body } }
+            />
+            <Panels items={ workItems } />
+          </div>
         }
         { this.props.children }
       </div>

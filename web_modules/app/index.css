@@ -1,3 +1,6 @@
+:root {
+  --darkred: color(var(--red) shade(10%));
+}
 #statinamic {
   min-height: 100vh;
 }
@@ -20,6 +23,26 @@
   }
 }
 
+.bg-darkred {
+  background-color: var(--darkred);
+}
+
+.darkred {
+  color: var(--darkred);
+}
+
+.hover-darkred {
+  @nest &:hover {
+    color: var(--darkred);
+  }
+}
+
+.bg-hover-darkred {
+  @nest &:hover {
+    background-color: var(--darkred);
+  }
+}
+
 .filled {
   fill: currentColor;
 }
@@ -28,9 +51,27 @@ a {
   color: currentColor;
 }
 
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
 .serif {
   font-family: source-serif-pro,
                georgia,
                times,
                serif;
+}
+
+.sans {
+  font-family: vortice-concept,
+               sans-serif;
+}
+
+.SVGInline-svg {
+  width: auto;
+  height: 100%;
 }

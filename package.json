@@ -12,7 +12,8 @@
     "test": "npm run build"
   },
   "statinamic": {
-    "CNAME": false
+    "CNAME": false,
+    "devPort": "1337"
   },
   "babel": {
     "presets": [

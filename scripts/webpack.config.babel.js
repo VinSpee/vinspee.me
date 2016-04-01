@@ -100,13 +100,18 @@ export default ({ config, pkg }) => ({
   },
 
   resolve: {
-    extensions: [ ".js", ".json", "", ".css" ],
+    extensions: [ ".js", ".json", "" ],
     modulesDirectories: [
       "web_modules",
       "node_modules",
     ],
     root: [
       path.join(config.cwd, "node_modules"),
+      path.join(config.cwd, "web_modules"),
+    ],
+    modules: [
+      path.resolve(config.cwd, "node_modules"),
+      path.resolve(config.cwd, "web_modules"),
     ],
   },
   resolveLoader: { root: [ path.join(config.cwd, "node_modules") ] },

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router"
+import { Link as NavItem } from "Nav"
 
 import SVG from "react-svg-inline"
 import logoSVG from "theme/vinspee-logo.svg"
@@ -25,28 +26,25 @@ export default class Header extends Component {
           </div>
           <ul className="list pl0 white">
             <li className="dib tc w-33">
-              <Link
+              <NavItem
                 to="/essays"
-                className="hover-red bg-hover-black db no-underline pv3 ph1"
               >
                 essays
-              </Link>
+              </NavItem>
             </li>
-            <li className="dib tc w-33">
-              <Link
+            <li className="dib tc w-34">
+              <NavItem
                 to="/labs"
-                className="db no-underline"
               >
                 labs
-              </Link>
+              </NavItem>
             </li>
             <li className="dib tc w-33">
-              <Link
+              <NavItem
                 to="/contact"
-                className="db no-underline"
               >
                 contact
-              </Link>
+              </NavItem>
             </li>
           </ul>
         </nav>

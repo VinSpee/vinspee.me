@@ -1,0 +1,36 @@
+#statinamic {
+  min-height: 100vh;
+}
+
+.vh-100 {
+  min-height: 100vh;
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.red {
+  color: var(--red);
+}
+
+.hover-red {
+  @nest &:hover {
+    color: var(--red);
+  }
+}
+
+.filled {
+  fill: currentColor;
+}
+
+a {
+  color: currentColor;
+}
+
+.serif {
+  font-family: source-serif-pro,
+               georgia,
+               times,
+               serif;
+}

@@ -5,13 +5,13 @@ const Panel = ({ imageURL, label, linkURL }) => (
   <a
     title={ label }
     href={ linkURL }
-    className="dib mw5 w-100 h5"
+    className="db mw-100 u-depth u-depth1"
     style={ { backgroundColor: "#ffffff" } }
   >
     <SVG
       component="div"
       svg={ imageURL }
-      className="w-100"
+      className="mw-100"
     />
   </a>
 )

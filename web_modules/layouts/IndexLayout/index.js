@@ -5,6 +5,9 @@ import Panels from "Panels"
 import TEDLogo from "logos/ted-logo.svg"
 import BankrateLogo from "logos/bankrate-logo.svg"
 import MyQLLogo from "logos/quicken-loans-logo.svg"
+import L11Logo from "logos/leveleleven-logo.svg"
+import OrganicLogo from "logos/organic-logo.svg"
+import CurveLogo from "logos/curve-logo.svg"
 
 const workItems = [
   {
@@ -18,9 +21,24 @@ const workItems = [
     imageURL: BankrateLogo,
   },
   {
+    label: "Organic Inc",
+    linkURL: "http://www.organic.com/",
+    imageURL: OrganicLogo,
+  },
+  {
+    label: "LevelEleven",
+    linkURL: "http://www.leveleleven.com/",
+    imageURL: L11Logo,
+  },
+  {
     label: "Quicken Loans",
     linkURL: "http://www.quickenloans.com/",
     imageURL: MyQLLogo,
+  },
+  {
+    label: "Curve Detroit",
+    linkURL: "http://www.curvedetroit.com/",
+    imageURL: CurveLogo,
   },
 ]
 
@@ -79,14 +97,18 @@ export default class IndexLayout extends Component {
 
         {
           head.title &&
-          <h1 className="sans red">{ head.title }</h1>
+            <header className="mw7 mha">
+              <h1 className="sans red">{ head.title }</h1>
+            </header>
         }
         {
           body &&
-          <div>
+          <div className="mha mw7 mb5">
             <div
+              className="content mb6"
               dangerouslySetInnerHTML={ { __html: body } }
             />
+            <h2 className="sans red">Brands I've worked with</h2>
             <Panels items={ workItems } />
           </div>
         }

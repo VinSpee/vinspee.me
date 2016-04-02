@@ -5,7 +5,7 @@ import ExtractTextPlugin from "extract-text-webpack-plugin"
 
 export default ({ config, pkg }) => ({
   ...config.dev && {
-    devtool: "cheap-module-eval-source-map",
+    devtool: "#cheap-module-eval-source-map",
   },
   module: {
     loaders: [
@@ -65,6 +65,13 @@ export default ({ config, pkg }) => ({
             "--white": "#efefef",
             "--black": "#202020",
             "--gray": "#5d5d5d",
+            "--Grid-gutter-size": "1rem",
+          },
+        },
+        customMedia: {
+          extensions: {
+            "--breakpoint-not-small": "(min-width: 33em)",
+            "--breakpoint-medium": "(min-width: 48em)",
           },
         },
       },

@@ -11,6 +11,16 @@
     "pretest": "npm run lint",
     "test": "npm run build"
   },
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinSpee/boiler-room.git"
+  },
+  "author": "Vince Speelman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VinSpee/vinspee.me/issues"
+  },
   "statinamic": {
     "CNAME": false,
     "devPort": "1337"
@@ -73,6 +83,8 @@
     "style-loader": "^0.12.3",
     "stylelint": "^5.0.1",
     "stylelint-config-standard": "^4.0.1",
+    "suitcss-components-grid": "^3.0.2",
+    "suitcss-depth": "^0.3.1",
     "tachyons": "^4.0.0-beta.18",
     "webpack": "^1.12.1",
     "whatwg-fetch": "^0.11.0"

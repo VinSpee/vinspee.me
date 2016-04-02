@@ -1,10 +1,21 @@
 import React, { PropTypes } from "react"
 import Panel from "./Panel"
+import "suitcss-components-grid/index.css"
 
 const Panels = ({ items }) => (
-  <ol className="w-70">
+  <ol
+    className="
+      Grid
+      Grid
+      Grid--withGutter
+      Grid--alignCenter
+    "
+  >
     { items.map(({ label, linkURL, imageURL }) => (
-      <li className="dib w-50 tc">
+      <li
+        key={ label }
+        className="Grid-cell mw5-ns tc mv2"
+      >
         <Panel
           linkURL={ linkURL }
           imageURL={ imageURL }

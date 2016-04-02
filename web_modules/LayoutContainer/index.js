@@ -2,10 +2,10 @@ import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 import ScriptsBlock from "ScriptsBlock"
 import "tachyons/src/tachyons.css"
+import "suitcss-depth/index.css"
 import "app/index.css"
 
 import Header from "Header"
-import Footer from "Footer"
 
 export default class Layout extends Component {
 
@@ -23,7 +23,7 @@ export default class Layout extends Component {
     } = this.context.metadata
 
     return (
-      <div className="serif bg-white vh-100 f4">
+      <div className="serif bg-white vh-100 f4 df flxcol oh">
         <Helmet
           meta={ [
             { property: "og:site_name", content: pkg.name },
@@ -31,10 +31,9 @@ export default class Layout extends Component {
           ] }
         />
         <Header />
-        <div className="ph3">
+        <div className="ph3 mt4 mw7 mha">
           { this.props.children }
         </div>
-        <Footer />
         <ScriptsBlock />
       </div>
     )

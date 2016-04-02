@@ -9,6 +9,8 @@
     "start": "statinamic start",
     "build": "statinamic build",
     "pretest": "npm run lint",
+    "predeploy": "npm run build",
+    "deploy": "surge dist/ vinspee.me",
     "test": "npm run build"
   },
   "version": "2.0.0",
@@ -85,6 +87,7 @@
     "stylelint-config-standard": "^4.0.1",
     "suitcss-components-grid": "^3.0.2",
     "suitcss-depth": "^0.3.1",
+    "surge": "^0.17.7",
     "tachyons": "^4.0.0-beta.18",
     "webpack": "^1.12.1",
     "whatwg-fetch": "^0.11.0"

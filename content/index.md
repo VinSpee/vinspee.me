@@ -21,4 +21,4 @@ User experience is king. Accessibility and interoperability must not be an after
 
 Off-screen, I'm a husband, [musician](https://soundcloud.com/vince-speelman), coffee and [beer snob](https://untappd.com/user/Vinspee), [food lover](http://instagram.com/vinspee), and [cat dad](http://instagram.com/clubbedchuck).
 
-Let's get to know eachother. You can [follow me](http://twitter.com/vinspee) if you'd like a never-ending stream of GIFs and geekery sprinkled with a healthy dose of consipracy theories and civil disobedience.
+Let's get to know each-other. You can [follow me](http://twitter.com/vinspee) if you'd like a never-ending stream of GIFs and geekery sprinkled with a healthy dose of conspiracy theories and civil disobedience.

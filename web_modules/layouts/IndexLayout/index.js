@@ -8,7 +8,7 @@ import MyQLLogo from "logos/quicken-loans-logo.svg"
 import L11Logo from "logos/leveleleven-logo.svg"
 import OrganicLogo from "logos/organic-logo.svg"
 import CurveLogo from "logos/curve-logo.svg"
-import BacardiLogo from "logos/curve-logo.svg"
+import BacardiLogo from "logos/bacardi-logo.svg"
 
 const workItems = [
   {

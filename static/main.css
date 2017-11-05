@@ -216,16 +216,10 @@
   #___gatsby .Fld\(r\)--xs {
     flex-direction: row;
   }
-  #___gatsby .Fz\(s6\)--xs {
-    font-size: 48px;
-  }
 }
 @media(min-width:700px) {
   #___gatsby .Fz\(s6\)--sm {
     font-size: 48px;
-  }
-  #___gatsby .Fz\(s7\)--sm {
-    font-size: 62px;
   }
 }
 @media(min-width:1000px) {

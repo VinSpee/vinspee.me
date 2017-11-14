@@ -74,7 +74,7 @@ const Footer = () => {
     <div
       className="
         Bgc(light)
-        P(s1)
+        Px(s1)
       "
     >
       <ul

@@ -9,16 +9,9 @@ const PageTemplate = ({ data }) => {
   const siteTitle = get(data, 'site.siteMetadata.title');
 
   return (
-    <div
-      className="
-        D(f)
-        Fld(c)
-        Mih(100%)
-        Flxg(1)
-      "
-    >
+    <div>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-      <header>
+      <header className="Mb(s3)">
         <PageTitle>
           <h1
             className="
@@ -33,20 +26,12 @@ const PageTemplate = ({ data }) => {
       </header>
       <div
         className="
-          Mih(100%)
-          Flxg(1)
-          cms
+          CMS
         "
-      >
-        <div
-          className="
-            Maw(49rem)
-          "
-          dangerouslySetInnerHTML={{
-            __html: post.html
-          }}
-        />
-      </div>
+        dangerouslySetInnerHTML={{
+          __html: post.html
+        }}
+      />
     </div>
   );
 };

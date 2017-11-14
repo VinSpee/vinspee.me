@@ -11,9 +11,13 @@ const WritingIndex = ({ data }) => {
   const title = `I’ve been thinking about these things lately.`;
 
   return (
-    <div>
+    <div
+      className="Mb(s3)"
+    >
       <Helmet title={`${title} | Vince Speelman`} />
-      <header>
+      <header
+        className="Mb(s3)"
+      >
         <PageTitle>
           <h1
             className="
@@ -30,7 +34,6 @@ const WritingIndex = ({ data }) => {
         className="
           Mih(100%)
           Flxg(1)
-          cms
         "
       >
         <div
@@ -49,19 +52,71 @@ const WritingIndex = ({ data }) => {
               )(post);
 
               return (
-                <div key={post.node.frontmatter.path}>
-                  <h3
-                    className="
-                      T(0)
-                      Fw(400)
+                <div
+                  key={post.node.frontmatter.path}
+                  class="
+                    Mb(s3)
+                  "
+                >
+                  <div
+                    class="
+                      Mb(s1)
                     "
                   >
-                    <Link to={post.node.frontmatter.path}>
-                      {post.node.frontmatter.title}
+                    <Link
+                      to={post.node.frontmatter.path}
+                      className="
+                        Bdb(s-6)
+                        Bdbc(light)
+                        Bdbs(s)
+                        C(dark)
+                        D(ib)
+                        Mstart(ns-6)
+                        Px(s-6)
+                        Td(n)
+                        Tt(u)
+                        Trs(allColorFade)
+                        C(red):h
+                        Bdbc(lightd):h
+                      "
+                    >
+                      <h2
+                        className="
+                          D(ib)
+                          T(0)
+                          Fz(s1)
+                          Fw(700)
+                          Ff(mono)
+                          Mb(0)
+                        "
+                      >
+                        <span
+                          to={post.node.frontmatter.path}
+                          className="
+                            Td(n)
+                          "
+                        >
+                          {post.node.frontmatter.title}
+                        </span>
+                      </h2>
                     </Link>
-                  </h3>
-                  <small>{post.node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                    <small
+                      className="
+                        Tt(u)
+                        Fz(s-2)
+                        D(ib)
+                        W(100%)
+                      "
+                    >
+                      {post.node.frontmatter.date}
+                    </small>
+                  </div>
+                  <p
+                    class="
+                      My(0)
+                    "
+                    dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
+                  />
                 </div>
               );
             }
@@ -89,7 +144,7 @@ export const pageQuery = graphql`
           excerpt
           frontmatter {
             path
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMM DD, YYYY")
           }
           frontmatter {
             title

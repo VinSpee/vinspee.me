@@ -3,7 +3,7 @@ import React from 'react';
 const PageTitle = ({ children }) => (
   <div
     className="
-      Px(s1)
+      Px(s5)
       Pb(s5)
       Bgc(r)
       BdB

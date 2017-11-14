@@ -2,8 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
-
-import Bio from 'components/bio';
+import PageTitle from 'components/page-title';
+import './style.css';
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
@@ -12,13 +12,36 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <div>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-      <h1
-        className="Fw(400)"
-      >{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <Bio />
+      <header className="Mb(s3)">
+        <PageTitle>
+          <h1
+            className="
+              Fz(100%)
+              My(0)
+              Fw(300)
+            "
+          >
+            {post.frontmatter.title}
+          </h1>
+          <p
+            className="
+              Fz(s-1)
+              Mx(4px)
+              My(0)
+              Fw(100)
+              Tt(u)
+            "
+          >
+            {post.frontmatter.date}
+          </p>
+        </PageTitle>
+      </header>
+      <main>
+        <div
+          className="CMS"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </main>
     </div>
   );
 };
@@ -38,7 +61,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM DD, YYYY")
       }
     }
   }

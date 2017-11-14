@@ -24,6 +24,11 @@ const Template = ({
   >
     <header
       role="masthead"
+      className="
+        Flxg(0)
+        Flxs(0)
+        Flxb(a)
+      "
     >
       <HomeHeader />
     </header>
@@ -38,7 +43,15 @@ const Template = ({
         Lh(1.8)
       "
     >
-      {children()}
+      <div
+        className="
+          Mih(100%)
+          H(100%)
+          Mb(s3)
+        "
+      >
+        {children()}
+      </div>
     </div>
     <footer
       role="contentinfo"
@@ -47,6 +60,9 @@ const Template = ({
         BdT
         Bdtw(s-6)
         Bdtc(lightd)
+        Flxg(0)
+        Flxs(0)
+        Flxb(a)
       "
     >
       <div

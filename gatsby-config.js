@@ -33,6 +33,28 @@ module.exports = {
           "gatsby-remark-smartypants",
           "gatsby-plugin-resolve-src",
           "gatsby-plugin-react-a11y",
+          /*
+           * {
+           *   resolve: "gatsby-remark-custom-classnames",
+           *   options: {
+           *     p: 'Pb(s1)',
+           *     h2: 'C(r)',
+           *   },
+           * },
+           */
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [
+          require('postcss-cssnext')({
+            features: {
+              rem: false,
+              nesting: true,
+            }
+          }),
         ],
       },
     },

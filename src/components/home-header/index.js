@@ -8,8 +8,9 @@ const HomeHeader = () => (
       className="
         Fw(400)
         D(b)
-        Mx(s-2)
+        Px(s5)
         My(0)
+        Mx(4px)
         Pt(s1)
         W(75%)
         Maw(31rem)
@@ -20,6 +21,7 @@ const HomeHeader = () => (
         className="
           C(dark)
           C(light):h
+          Trs(colorFade)
           D(b)
         "
         aria-label="Home"

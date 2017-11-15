@@ -8,10 +8,10 @@ const HomeHeader = () => (
       className="
         Fw(400)
         D(b)
-        Px(s5)
+        Px(s1)
         My(0)
         Mx(4px)
-        Pt(s1)
+        Pt(s5)
         W(75%)
         Maw(31rem)
       "

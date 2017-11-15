@@ -9,6 +9,7 @@
   "dependencies": {
     "@eaze/css-reset": "1.1.0",
     "@jacobmischka/gatsby-plugin-react-svg": "1.0.0",
+    "dateformat": "3.0.2",
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-catch-links": "1.0.9",

@@ -21,7 +21,7 @@ const PageTitle = ({ children }) => (
         Fz(s7)--md
         Fw(400)
         Lh(1.4)
-        C(light)
+        C(lightl)
         Ff(mono)
         My(0)
         Maw(53rem)

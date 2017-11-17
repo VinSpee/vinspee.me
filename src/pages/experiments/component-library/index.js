@@ -2,11 +2,13 @@ import React from 'react';
 import path from 'ramda/src/path';
 import Helmet from 'react-helmet';
 import PageTitle from 'components/page-title';
+import Library from './library';
 
 const ComponentLibrary = ({ data }) => {
+  console.log(data.allSitePage.edges);
   const siteTitle = path(['site', 'siteMetadata', 'title'])(data);
   // const posts = pathOr([])(['allMarkdownRemark', 'edges'])(data);
-  const title = `How this site was made`;
+  const title = `Creating a Component Library`;
   return (
     <div>
       <Helmet title={`${title} | ${siteTitle}`} />
@@ -23,7 +25,9 @@ const ComponentLibrary = ({ data }) => {
           </h1>
         </PageTitle>
       </header>
-      dis a comp lib
+      <div>
+        <Library components={data.allSitePage.edges} />
+      </div>
     </div>
   );
 };
@@ -36,6 +40,20 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+      }
+    }
+    allSitePage(
+      filter: {
+        component: {
+          regex: "/^.*\/experiments\/component-library\/(?!(index)|(library)).*$/"
+        }
+      },
+    ) {
+      edges {
+        node {
+          id
+          path
+        }
       }
     }
   }

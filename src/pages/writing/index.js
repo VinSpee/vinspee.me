@@ -5,6 +5,7 @@ import compose from 'ramda/src/compose';
 import map from 'ramda/src/map';
 import Helmet from 'react-helmet';
 import PageTitle from 'components/page-title';
+import IndexTitle from 'components/index-title';
 
 const WritingIndex = ({ data }) => {
   const posts = pathOr([])(['allMarkdownRemark', 'edges'])(data);
@@ -54,51 +55,25 @@ const WritingIndex = ({ data }) => {
               return (
                 <div
                   key={post.node.frontmatter.path}
-                  class="
+                  className="
                     Mb(s3)
                   "
                 >
                   <div
-                    class="
+                    className="
                       Mb(s1)
                     "
                   >
                     <Link
                       to={post.node.frontmatter.path}
-                      className="
-                        Bdb(s-6)
-                        Bdbc(light)
-                        Bdbs(s)
-                        C(dark)
-                        D(ib)
-                        Mstart(ns-6)
-                        Px(s-6)
-                        Td(n)
-                        Tt(u)
-                        Trs(allColorFade)
-                        C(red):h
-                        Bdbc(lightd):h
-                      "
                     >
-                      <h2
-                        className="
-                          D(ib)
-                          T(0)
-                          Fz(s1)
-                          Fw(700)
-                          Ff(mono)
-                          Mb(0)
-                        "
-                      >
-                        <span
-                          to={post.node.frontmatter.path}
-                          className="
-                            Td(n)
-                          "
+                      <IndexTitle>
+                        <h2
+                          className="Fz(s1)"
                         >
-                          {post.node.frontmatter.title}
-                        </span>
-                      </h2>
+                            {post.node.frontmatter.title}
+                        </h2>
+                      </IndexTitle>
                     </Link>
                     <small
                       className="
@@ -112,7 +87,7 @@ const WritingIndex = ({ data }) => {
                     </small>
                   </div>
                   <p
-                    class="
+                    className="
                       My(0)
                     "
                     dangerouslySetInnerHTML={{ __html: post.node.excerpt }}

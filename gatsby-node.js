@@ -9,8 +9,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   const template = {
     post: path.resolve('./src/templates/blog-post.js'),
+    'component-library': path.resolve('./src/templates/component-library.js'),
     page: path.resolve('./src/templates/page.js'),
-    experiment: path.resolve('./src/templates/page.js'),
   };
 
   return new Promise((resolve, reject) => {

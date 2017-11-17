@@ -7,6 +7,7 @@ import map from 'ramda/src/map';
 import path from 'ramda/src/path';
 import Helmet from 'react-helmet';
 import PageTitle from 'components/page-title';
+import IndexTitle from 'components/index-title';
 
 const ExperimentIndex = ({ data }) => {
   const siteTitle = path(['site', 'siteMetadata', 'title'])(data);
@@ -71,41 +72,13 @@ const ExperimentIndex = ({ data }) => {
                       Mb(s1)
                     "
                   >
-                    <span
-                      className="
-                        Bdb(s-6)
-                        Bdbc(light)
-                        Bdbs(s)
-                        C(dark)
-                        D(ib)
-                        Mstart(ns-6)
-                        Px(s-6)
-                        Td(n)
-                        Tt(u)
-                        Trs(allColorFade)
-                        C(red):h
-                        Bdbc(lightd):h
-                      "
-                    >
+                    <IndexTitle>
                       <h2
-                        className="
-                          D(ib)
-                          T(0)
-                          Fz(s1)
-                          Fw(700)
-                          Ff(mono)
-                          Mb(0)
-                        "
+                        className="Fz(s1)"
                       >
-                        <span
-                          className="
-                            Td(n)
-                          "
-                        >
                           {title}
-                        </span>
                       </h2>
-                    </span>
+                    </IndexTitle>
                     <small
                       className="
                         Tt(u)
@@ -149,7 +122,11 @@ export const pageQuery = graphql`
       }
     }
     allSitePage(
-    filter: { id: { regex: "/SitePage \/experiments\/.*\//" } },
+      filter: {
+        component: {
+          regex: "/\/experiments\/.*\/index.js/"
+        }
+      },
     ) {
       edges {
         node {

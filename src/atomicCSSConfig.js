@@ -67,6 +67,7 @@ module.exports = {
     custom: {
       ...sizes,
       ...colors,
+      'inner-shadow': `inset 0 1px 0 0 ${colors.lightl}`,
       'underline': `inset 0 -3px 0 0 ${colors.light}`,
       'release': 'calc(-50vw + 50%)',
       allColorFade: 'border-color .4s ease-in-out, color .2s ease-in-out, background .2s ease-in-out',

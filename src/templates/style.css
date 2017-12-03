@@ -112,10 +112,10 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   & a:not(.anchor) {
-    color: var(--lightl);
+    color: var(--dark);
     font-family: monospace;
     font-style: italic;
-    background-color: var(--darkll);
+    background-color: var(--light);
     text-decoration: none;
     padding: calc(var(--s-6) / 2) var(--s-6);
     transition: color .2s ease-in-out, background-color .2s ease-in-out;

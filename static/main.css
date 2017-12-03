@@ -1,26 +1,11 @@
-#___gatsby .Bd, #___gatsby .Bdw\(1px\), .Bd {
-  border-width: 1px;
-}
-#___gatsby .Bd, #___gatsby .Bds\(s\), .Bd, .BdT, .BdB {
-  border-style: solid;
-}
 #___gatsby .Bdb\(s-6\) {
   border-bottom: 8px;
 }
 #___gatsby .Bdc\(lightd\) {
   border-color: #b4cacf;
 }
-#___gatsby .Bdtc\(light\) {
-  border-top-color: #e0e9eb;
-}
 #___gatsby .Bdtc\(lightd\) {
   border-top-color: #b4cacf;
-}
-#___gatsby .Bdtc\(r\) {
-  border-top-color: #f24432;
-}
-#___gatsby .Bdtc\(rd\) {
-  border-top-color: #d2210f;
 }
 #___gatsby .Bdbc\(light\) {
   border-bottom-color: #e0e9eb;
@@ -30,6 +15,9 @@
 }
 #___gatsby .Bdbc\(rd\) {
   border-bottom-color: #d2210f;
+}
+#___gatsby .Bds\(s\), .BdT, .BdB {
+  border-style: solid;
 }
 #___gatsby .Bdts\(s\) {
   border-top-style: solid;
@@ -42,9 +30,6 @@
 }
 #___gatsby .Bdbw\(s-6\) {
   border-bottom-width: 8px;
-}
-#___gatsby .Bdrs\(s-6\) {
-  border-radius: 8px;
 }
 #___gatsby .Bdrs\(s2\) {
   border-radius: 21px;
@@ -66,12 +51,6 @@
 }
 #___gatsby .Bgc\(r\) {
   background-color: #f24432;
-}
-#___gatsby .Bxsh\(below-inner-shadow\) {
-  box-shadow: 0 1px 0 0 #fafbfb;
-}
-#___gatsby .Bxsh\(inner-shadow\) {
-  box-shadow: inset 0 1px 0 0 #fafbfb;
 }
 #___gatsby .C\(dark\) {
   color: #161f21;
@@ -267,9 +246,6 @@
 #___gatsby .P\(s-6\) {
   padding: 8px;
 }
-#___gatsby .P\(s1\) {
-  padding: 19px;
-}
 #___gatsby .Px\(s-6\) {
   padding-left: 8px;
   padding-right: 8px;
@@ -284,17 +260,12 @@
   padding-top: 13px;
   padding-bottom: 13px;
 }
-#___gatsby .Py\(s-6\), #___gatsby .Pt\(s-6\) {
-  padding-top: 8px;
-}
 #___gatsby .Py\(s-6\) {
+  padding-top: 8px;
   padding-bottom: 8px;
 }
 #___gatsby .Pt\(s-4\) {
   padding-top: 11px;
-}
-#___gatsby .Pt\(s-5\) {
-  padding-top: 9px;
 }
 #___gatsby .Pt\(s2\) {
   padding-top: 21px;

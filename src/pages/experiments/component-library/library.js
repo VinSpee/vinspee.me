@@ -28,46 +28,40 @@ const Library = ({ components }) => {
         return (
           <li
             key={file}
+            id={filename}
+            className="Mb(s4)"
           >
             <div
               className="
-                D(b)
                 C(dark)
-                Td(n)
               "
             >
               <div
                 className="
-                  Mb(s4)
+                  Mb(s1)
                 "
+                id={filename}
               >
-                <div
-                  className="
-                    Mb(s1)
-                  "
-                  id={filename}
+                <IndexTitle>
+                  <h2
+                    className="Fz(s1)"
+                  >
+                      {title}
+                  </h2>
+                </IndexTitle>
+              </div>
+              <div>
+                <p
+                  className="My(0) Mb(s1)"
                 >
-                  <IndexTitle>
-                    <h2
-                      className="Fz(s1)"
-                    >
-                        {title}
-                    </h2>
-                  </IndexTitle>
-                </div>
-                <div>
-                  <p
-                    className="My(0) Mb(s1)"
-                  >
-                    {excerpt}
-                  </p>
-                  <Browser
-                    title={title}
-                    url={filename}
-                  >
-                    <Component />
-                  </Browser>
-                </div>
+                  {excerpt}
+                </p>
+                <Browser
+                  title={`Components / ${title}`}
+                  url={filename}
+                >
+                  <Component />
+                </Browser>
               </div>
             </div>
           </li>

@@ -11,4 +11,4 @@ const PageTitleDemo = () => (
 
 export default PageTitleDemo;
 export const title = 'Page Title';
-export const excerpt = 'Used to complete a Bar action';
+export const excerpt = 'Used to convey the title of a page; blends in with the header component.';

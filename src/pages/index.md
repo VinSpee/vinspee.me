@@ -1,11 +1,13 @@
 ---
 title: I make simple systems for hard problems.
-date: "2017-11-04T13:21:03.284Z"
-type: "page"
-path: "/"
+date: 2017-11-04T13:21:03.284Z
+type: page
+path: /
 ---
 
-My name is [Vince Speelman](http://twitter.com/vinspee). I'm a front-end developer from Detroit, Michigan and I believe in the web. I use Javascript, HTML, and CSS to accomplish goals and solve real problems. I love good tools and working with people that care about doing the right thing.  I'm dedicated to responsive web design, unwavering semantics, and practical code.  I've created [web apps that spread important ideas to millions of people a week](https://www.ted.com/), [Loyalty tools for high-end retailers](https://usejewel.com/), [JD Power Award-winning responsive experiences for multi-billion dollar financial institutions](http://myql.com/), [apps that make people better](http://leveleleven.com/), and [simple tools](http://my.bankrate.com) for [scary](http://my.creditcards.com) [topics](http://quizzle.com).
+My name is [Vince Speelman](http://twitter.com/vinspee). I'm a front-end developer from Detroit, Michigan and I believe in the web. I use Javascript, HTML, and CSS to accomplish goals and solve real problems. I love good tools and working with people that care about doing the right thing.
+
+I'm dedicated to responsive web design, unwavering semantics, and practical code.  I've created [web apps that spread important ideas to millions of people a week](https://www.ted.com/), [Loyalty tools for high-end retailers](https://usejewel.com/), [JD Power Award-winning responsive experiences for multi-billion dollar financial institutions](http://myql.com/), [apps that make people better](http://leveleleven.com/), and [simple tools](http://my.bankrate.com) for [scary](http://my.creditcards.com) [topics](http://quizzle.com).
 
 I'm currently [spreading ideas](https://www.ted.com) with the smartest team in the
 world.

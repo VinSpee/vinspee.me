@@ -4,10 +4,15 @@
 # any sections. Set to true to stop .editor config file search on current file
 root = true
 
-[*]
+[*.json]
 # Indentation style
 # Possible values - tab, space
 indent_style = space
+
+[*]
+# Indentation style
+# Possible values - tab, space
+indent_style = tab
 
 # Indentation size in single-spaced characters
 # Possible values - an integer, tab

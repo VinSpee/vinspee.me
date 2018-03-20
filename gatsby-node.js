@@ -1,53 +1,36 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
-const path = require('path')
-const select = require('unist-util-select')
-const fs = require('fs-extra')
+const path = require('path');
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ boundActionCreators, graphql }) => {
+	const { createPage } = boundActionCreators;
 
-  const template = {
-    post: path.resolve('./src/templates/blog-post.js'),
-    'component-library': path.resolve('./src/templates/component-library.js'),
-    page: path.resolve('./src/templates/page.js'),
-  };
+	const blogPostTemplate = path.resolve(`src/templates/page.js`);
 
-  return new Promise((resolve, reject) => {
-    const pages = []
-    resolve(
-      graphql(
-        `
-      {
-        allMarkdownRemark(limit: 1000) {
-          edges {
-            node {
-              frontmatter {
-                path
-                type
-              }
-            }
-          }
-        }
-      }
-    `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
-        }
+	return graphql(`
+		{
+			allMarkdownRemark(
+				sort: { order: DESC, fields: [frontmatter___date] }
+				limit: 1000
+			) {
+				edges {
+					node {
+						frontmatter {
+							path
+						}
+					}
+				}
+			}
+		}
+	`).then(result => {
+		if (result.errors) {
+			return Promise.reject(result.errors);
+		}
 
-        // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
-          createPage({
-            path: edge.node.frontmatter.path,
-            component: edge.node.frontmatter.type && template[edge.node.frontmatter.type] || template.page,
-            context: {
-              path: edge.node.frontmatter.path,
-            },
-          })
-        })
-      })
-    )
-  })
-}
+		result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+			createPage({
+				path: node.frontmatter.path,
+				component: blogPostTemplate,
+				context: {}, // additional data can be passed via context
+			});
+		});
+	});
+};

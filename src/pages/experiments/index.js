@@ -11,7 +11,6 @@ import IndexTitle from 'components/index-title';
 
 const ExperimentIndex = ({ data }) => {
 	const siteTitle = path(['site', 'siteMetadata', 'title'])(data);
-	// const posts = pathOr([])(['allMarkdownRemark', 'edges'])(data);
 	const title = `I’ve been playing with these things lately`;
 	const repos = data.allRepositories.repositories.map(x => x.node);
 

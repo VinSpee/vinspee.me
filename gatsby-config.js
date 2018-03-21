@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
 	siteMetadata: {
-		title: 'Simple systems for hard problems.',
+		title: 'Vince Speelman',
 		author: 'Vince Speelman',
 	},
 	plugins: [

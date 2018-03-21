@@ -39,6 +39,12 @@ const PageTemplate = ({ data }) => {
 
 export const pageQuery = graphql`
 	query PagesByPath($path: String!) {
+		site {
+			siteMetadata {
+				title
+				author
+			}
+		}
 		markdownRemark(frontmatter: { path: { eq: $path } }) {
 			html
 			frontmatter {

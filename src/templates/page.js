@@ -1,17 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
-import get from 'lodash/get';
+import path from 'ramda/src/path';
 import PageTitle from 'components/page-title';
 import './style.css';
 
 const PageTemplate = ({ data }) => {
 	const post = data.markdownRemark;
-	const siteTitle = get(data, 'site.siteMetadata.title');
+	const siteTitle = path(['site', 'siteMetadata', 'title'])(data);
+	const postTitle = path(['frontmatter', 'title'])(post);
 
 	return (
 		<div>
-			<Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+			<Helmet title={`${postTitle} | ${siteTitle}`} />
 			<header className="Mb(s3)">
 				<PageTitle>
 					<h1
@@ -21,7 +22,7 @@ const PageTemplate = ({ data }) => {
 							Fw(300)
 						"
 					>
-						{post.frontmatter.title}
+						{postTitle}
 					</h1>
 				</PageTitle>
 			</header>

@@ -29,7 +29,6 @@
     "gatsby-source-medium": "1.0.14",
     "gatsby-transformer-remark": "^1.7.1",
     "gatsby-transformer-sharp": "^1.6.1",
-    "lodash": "^4.15.0",
     "ramda": "0.25.0",
     "webpack-atomizer-loader": "0.4.0"
   },

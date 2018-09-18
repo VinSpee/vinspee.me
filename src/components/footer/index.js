@@ -19,8 +19,8 @@ const FooterLink = ({ children, to, ...rest }) => (
       Py(s-2)
     "
     activeClassName="
-      C(r)
-      C(rd):h
+      C(r)!
+      C(rd)!:h
     "
     {...rest}
   >
@@ -80,7 +80,8 @@ const Footer = () => {
           Fz(s-1)
           D(f)
           Jc(sb)
-          Fld(r)
+          Fld(c)
+          Fld(r)!--xs
           Ai(c)
           C(lightd)
         "

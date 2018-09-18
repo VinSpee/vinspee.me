@@ -49,11 +49,11 @@
 #___gatsby .C\(lightl\) {
   color: #fafbfb;
 }
-#___gatsby .C\(r\) {
-  color: #f24432;
+#___gatsby .C\(r\)\! {
+  color: #f24432 !important;
 }
-#___gatsby .C\(rd\)\:h:hover {
-  color: #d2210f;
+#___gatsby .C\(rd\)\!\:h:hover {
+  color: #d2210f !important;
 }
 #___gatsby .C\(red\)\:h:hover {
   color: red;
@@ -84,9 +84,6 @@
 }
 #___gatsby .Fld\(c\) {
   flex-direction: column;
-}
-#___gatsby .Fld\(r\) {
-  flex-direction: row;
 }
 #___gatsby .Ai\(c\) {
   align-items: center;
@@ -266,6 +263,9 @@
 @media(min-width:350px) {
   #___gatsby .D\(b\)--xs {
     display: block;
+  }
+  #___gatsby .Fld\(r\)\!--xs {
+    flex-direction: row !important;
   }
 }
 @media(min-width:700px) {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import Link from 'gatsby-link';
 import Browser from 'components/browser';
 import IndexTitle from 'components/index-title';
 

@@ -19,7 +19,6 @@ const Template = ({ children, location, route }) => (
     "
   >
     <header
-      role="masthead"
       className="
         Flxg(0)
         Flxs(0)

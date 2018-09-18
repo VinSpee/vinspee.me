@@ -26,7 +26,7 @@ const HomeHeader = () => (
         "
         aria-label="Home"
       >
-        <Logo />
+        <Logo id="main-logo" />
         <span className="Hidden">Home</span>
       </Link>
     </h1>

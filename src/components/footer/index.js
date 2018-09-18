@@ -42,7 +42,7 @@ const Footer = () => {
             Mt(3px)
           "
         >
-          <Mark />
+          <Mark id="main-mark" />
           <span id="footer-home-label" className="Hidden">
             Home
           </span>
@@ -92,7 +92,11 @@ const Footer = () => {
             </FooterLink>
           </div>,
           i !== items.length - 1 && (
-            <span key={`spacer-${item.label}`} className="D(n) D(b)--xs">
+            <span
+              role="presentation"
+              key={`spacer-${item.label}`}
+              className="D(n) D(b)--xs"
+            >
               {' '}
               •
               {' '}

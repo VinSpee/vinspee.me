@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import path from 'ramda/src/path';
 import Helmet from 'react-helmet';
 import PageTitle from '../../components/page-title';
-import Layout from '../../components/layout';
 import IndexTitle from '../../components/index-title';
 
 const ExperimentIndex = ({ data }) => {
@@ -13,82 +12,80 @@ const ExperimentIndex = ({ data }) => {
   const repos = data.allRepositories.repositories.map(x => x.node);
 
   return (
-    <Layout>
-      <div className="Mb(3)">
-        <Helmet title={`${title} | ${siteTitle}`} />
-        <header className="Mb(s3)">
-          <PageTitle>
-            <h1
+    <div className="Mb(3)">
+      <Helmet title={`${title} | ${siteTitle}`} />
+      <header className="Mb(s3)">
+        <PageTitle>
+          <h1
+            className="
+              Fz(100%)
+              My(0)
+              Fw(300)
+            "
+          >
+            {title}
+          </h1>
+        </PageTitle>
+      </header>
+      <ol
+        className="
+          List(n)
+          Pstart(0)
+          My(0)
+        "
+      >
+        {repos.map(({
+          name, url, description, createdAt,
+        }) => (
+          <li key={url}>
+            <a
+              href={url}
               className="
-                Fz(100%)
-                My(0)
-                Fw(300)
-              "
+                  D(b)
+                  C(dark)
+                  Td(n)
+                "
             >
-              {title}
-            </h1>
-          </PageTitle>
-        </header>
-        <ol
-          className="
-            List(n)
-            Pstart(0)
-            My(0)
-          "
-        >
-          {repos.map(({
-            name, url, description, createdAt,
-          }) => (
-            <li key={url}>
-              <a
-                href={url}
+              <div
                 className="
-                    D(b)
-                    C(dark)
-                    Td(n)
+                    Mb(s4)
                   "
               >
                 <div
                   className="
-                      Mb(s4)
+                      Mb(s1)
                     "
                 >
-                  <div
-                    className="
-                        Mb(s1)
-                      "
-                  >
-                    <IndexTitle>
-                      <h2
-                        className="
-                            Fz(s1)
-                            Fw(300)
-                          "
-                      >
-                        {name}
-                      </h2>
-                    </IndexTitle>
-                    <small
+                  <IndexTitle>
+                    <h2
                       className="
-                          Tt(u)
-                          Fz(s-2)
-                          D(ib)
-                          W(100%)
+                          Fz(s1)
+                          Fw(300)
                         "
                     >
-                      {createdAt}
-                    </small>
-                  </div>
-                  <div>
-                    <p className="My(0)">{description}</p>
-                  </div>
+                      {name}
+                    </h2>
+                  </IndexTitle>
+                  <small
+                    className="
+                        Tt(u)
+                        Fz(s-2)
+                        D(ib)
+                        W(100%)
+                      "
+                  >
+                    {createdAt}
+                  </small>
                 </div>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </Layout>
+                <div>
+                  <p className="My(0)">{description}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
   );
 };
 

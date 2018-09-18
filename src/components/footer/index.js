@@ -32,7 +32,6 @@ const Footer = () => {
   const items = [
     {
       to: '/',
-      exact: true,
       label: 'home',
       children: (
         <div

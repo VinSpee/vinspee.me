@@ -11,6 +11,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: `${__dirname}/src/components/layout/index.js`,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages/`,

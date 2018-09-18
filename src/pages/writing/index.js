@@ -5,7 +5,6 @@ import pathOr from 'ramda/src/pathOr';
 import compose from 'ramda/src/compose';
 import map from 'ramda/src/map';
 import Helmet from 'react-helmet';
-import Layout from '../../components/layout';
 import PageTitle from '../../components/page-title';
 import IndexTitle from '../../components/index-title';
 
@@ -17,90 +16,88 @@ const WritingIndex = ({ data }) => {
   const title = 'I’ve been thinking about these things lately.';
 
   return (
-    <Layout>
-      <div className="Mb(s3)">
-        <Helmet title={`${title} | Vince Speelman`} />
-        <header className="Mb(s3)">
-          <PageTitle>
-            <h1
-              className="
-                Fz(100%)
-                My(0)
-                Fw(300)
-              "
-            >
-              {title}
-            </h1>
-          </PageTitle>
-        </header>
-        <div
-          className="
-            Mih(100%)
-            Flxg(1)
-          "
-        >
-          <div
+    <div className="Mb(s3)">
+      <Helmet title={`${title} | Vince Speelman`} />
+      <header className="Mb(s3)">
+        <PageTitle>
+          <h1
             className="
-              Maw(49rem)
+              Fz(100%)
+              My(0)
+              Fw(300)
             "
           >
-            {map((post) => {
-              if (post.path !== '/404/') {
-                return (
+            {title}
+          </h1>
+        </PageTitle>
+      </header>
+      <div
+        className="
+          Mih(100%)
+          Flxg(1)
+        "
+      >
+        <div
+          className="
+            Maw(49rem)
+          "
+        >
+          {map((post) => {
+            if (post.path !== '/404/') {
+              return (
+                <div
+                  key={post.id}
+                  className="
+                    Mb(s3)
+                  "
+                >
                   <div
-                    key={post.id}
                     className="
-                      Mb(s3)
+                      Mb(s1)
                     "
                   >
-                    <div
+                    <a
+                      href={`https://medium.com/@${post.author.username}/${
+                        post.mediumID
+                      }`}
+                    >
+                      <IndexTitle>
+                        <h2
+                          className="
+                            Fz(s1)
+                            Fw(300)
+                          "
+                        >
+                          {post.title}
+                        </h2>
+                      </IndexTitle>
+                    </a>
+                    <small
                       className="
-                        Mb(s1)
+                        Tt(u)
+                        Fz(s-2)
+                        D(ib)
+                        W(100%)
                       "
                     >
-                      <a
-                        href={`https://medium.com/@${post.author.username}/${
-                          post.mediumID
-                        }`}
-                      >
-                        <IndexTitle>
-                          <h2
-                            className="
-                              Fz(s1)
-                              Fw(300)
-                            "
-                          >
-                            {post.title}
-                          </h2>
-                        </IndexTitle>
-                      </a>
-                      <small
-                        className="
-                          Tt(u)
-                          Fz(s-2)
-                          D(ib)
-                          W(100%)
-                        "
-                      >
-                        {post.firstPublishedAt}
-                      </small>
-                    </div>
-                    <p
-                      className="
-                        My(0)
-                      "
-                    >
-                      {post.content.subtitle}
-                    </p>
+                      {post.firstPublishedAt}
+                    </small>
                   </div>
-                );
-              }
-              return null;
-            })(posts)}
-          </div>
+                  <p
+                    className="
+                      My(0)
+                    "
+                  >
+                    {post.content.subtitle}
+                  </p>
+                </div>
+              );
+            }
+            return null;
+          })(posts)}
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 

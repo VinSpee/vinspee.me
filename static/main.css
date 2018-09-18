@@ -85,6 +85,9 @@
 #___gatsby .Fld\(c\) {
   flex-direction: column;
 }
+#___gatsby .Fld\(r\) {
+  flex-direction: row;
+}
 #___gatsby .Ai\(c\) {
   align-items: center;
 }
@@ -263,9 +266,6 @@
 @media(min-width:350px) {
   #___gatsby .D\(b\)--xs {
     display: block;
-  }
-  #___gatsby .Fld\(r\)--xs {
-    flex-direction: row;
   }
 }
 @media(min-width:700px) {

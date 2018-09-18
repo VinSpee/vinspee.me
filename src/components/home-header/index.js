@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import Logo from 'components/vinspee-logo.svg';
+import { Link } from 'gatsby';
+import Logo from '../vinspee-logo.svg';
 
 const HomeHeader = () => (
   <div>
@@ -27,9 +27,7 @@ const HomeHeader = () => (
         aria-label="Home"
       >
         <Logo />
-        <span className="Hidden">
-          Home
-        </span>
+        <span className="Hidden">Home</span>
       </Link>
     </h1>
   </div>

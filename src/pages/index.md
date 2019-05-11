@@ -16,7 +16,7 @@ I [ship code and give back](http://github.com/vinspee) outside of my day job and
 
 User experience is king. Accessibility and interoperability can not be an afterthought. Developer ergonimics are truly important. Shipping is a must.
 
-Off-screen, I'm a husband, [musician](https://soundcloud.com/vince-speelman), [beer snob](https://untappd.com/user/Vinspee), and [VW Vanagon Owner](http://instagram.com/vinspee).
+Off-screen, I'm a husband, father, [musician](https://soundcloud.com/vince-speelman), [beer snob](https://untappd.com/user/Vinspee), and [VW Vanagon Owner](http://instagram.com/vinspee).
 
 Let's get to know each-other. You can [follow me](http://twitter.com/vinspee) to see a bit of how I think and what I'm up to.
 

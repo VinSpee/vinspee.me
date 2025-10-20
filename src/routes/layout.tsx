@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';
-import { css, cx } from 'styled-system/css';
+import { css } from 'styled-system/css';
 
 export const RouterHead = component$(() => {
   const loc = useLocation();
@@ -15,37 +15,58 @@ export const RouterHead = component$(() => {
 });
 
 const container = css({
-  fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji',
+  bg: 'r',
+  color: 'dark',
+  fontFamily: 'sans',
+  fontSize: 's1',
+  minH: '100vh',
+  h: '100%',
+  display: 'flex',
+  flexDirection: 'column',
 });
 
 const headerCls = css({
-  py: 4,
-  borderBottomWidth: '1px',
-  borderColor: 'gray.200',
+  flex: '0 0 auto',
+  px: 's1',
+  pt: 's5',
 });
 
 const navCls = css({
   display: 'flex',
-  gap: 4,
+  gap: 's1',
 });
 
 const mainCls = css({
-  p: 6,
-  maxWidth: '48rem',
-  mx: 'auto',
+  flex: '1 1 auto',
+  display: 'flex',
+  flexDirection: 'column',
+  bg: 'lightl',
+  color: 'darkll',
+  px: 's1',
+  lineHeight: 1.8,
+});
+
+const innerMain = css({
+  minH: '100%',
+  h: '100%',
+  mb: 's3',
 });
 
 const footerCls = css({
-  py: 4,
-  borderTopWidth: '1px',
-  borderColor: 'gray.200',
-  color: 'gray.500',
+  bg: 'light',
+  borderTopWidth: 's-6',
+  borderColor: 'lightd',
+  flex: '0 0 auto',
+});
+
+const footerInner = css({
+  maxW: '28rem',
 });
 
 const linkCls = css({
   textDecoration: 'none',
   color: 'inherit',
-  _hover: { textDecoration: 'underline' },
+  _hover: { textDecoration: 'underline', color: 'light' },
 });
 
 export default component$(() => {
@@ -59,11 +80,13 @@ export default component$(() => {
           <Link class={linkCls} href="/contact/">Contact</Link>
         </nav>
       </header>
-      <main class={mainCls}>
-        <slot />
-      </main>
+      <div class={mainCls}>
+        <div class={innerMain}>
+          <slot />
+        </div>
+      </div>
       <footer class={footerCls}>
-        © {new Date().getFullYear()} Vince Speelman
+        <div class={footerInner}>© {new Date().getFullYear()} Vince Speelman</div>
       </footer>
     </div>
   );

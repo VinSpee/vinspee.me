@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { routeLoader$ } from '@builder.io/qwik-city';
-import { css } from 'styled-system/css';
+import { styled } from 'styled-system/jsx';
 
 interface MediumPost {
   id: string;
@@ -71,27 +71,29 @@ export default component$(() => {
   const posts = useMediumPosts();
 
   return (
-    <section>
-      <h1>Writing</h1>
+    <styled.section>
+      <styled.h1>Writing</styled.h1>
       {posts.value.length === 0 ? (
-        <p>No posts found from Medium right now. Please check back later.</p>
+        <styled.p>No posts found from Medium right now. Please check back later.</styled.p>
       ) : (
-        <div>
+        <styled.div>
           {posts.value.map((post) => (
-            <article key={post.id} class={css({ mb: 's3' })}>
-              <header class={css({ mb: 's1' })}>
-                <a href={post.url} target="_blank" rel="noopener noreferrer">
-                  <h2 class={css({ fontWeight: 'normal', fontSize: 's1' })}>{post.title}</h2>
-                </a>
-                <small class={css({ textTransform: 'uppercase', fontSize: 's-1', display: 'block' })}>
+            <styled.article key={post.id} mb="s3">
+              <styled.header mb="s1">
+                <styled.a href={post.url} target="_blank" rel="noopener noreferrer">
+                  <styled.h2 fontWeight="normal" fontSize="s1" m="0">
+                    {post.title}
+                  </styled.h2>
+                </styled.a>
+                <styled.small textTransform="uppercase" fontSize="s-1" display="block">
                   {post.published}
-                </small>
-              </header>
-              <p class={css({})}>{post.subtitle}</p>
-            </article>
+                </styled.small>
+              </styled.header>
+              <styled.p mt="0">{post.subtitle}</styled.p>
+            </styled.article>
           ))}
-        </div>
+        </styled.div>
       )}
-    </section>
+    </styled.section>
   );
 });

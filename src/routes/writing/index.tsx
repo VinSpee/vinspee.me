@@ -78,16 +78,16 @@ export default component$(() => {
       ) : (
         <div>
           {posts.value.map((post) => (
-            <article key={post.id} class={css({ mb: 7 })}>
-              <header class={css({ mb: 2 })}>
+            <article key={post.id} class={css({ mb: 's3' })}>
+              <header class={css({ mb: 's1' })}>
                 <a href={post.url} target="_blank" rel="noopener noreferrer">
-                  <h2 class={css({ m: 0, fontWeight: 'normal', fontSize: 'lg' })}>{post.title}</h2>
+                  <h2 class={css({ fontWeight: 'normal', fontSize: 's1' })}>{post.title}</h2>
                 </a>
-                <small class={css({ textTransform: 'uppercase', fontSize: 'sm', display: 'block' })}>
+                <small class={css({ textTransform: 'uppercase', fontSize: 's-1', display: 'block' })}>
                   {post.published}
                 </small>
               </header>
-              <p class={css({ mt: 0 })}>{post.subtitle}</p>
+              <p class={css({})}>{post.subtitle}</p>
             </article>
           ))}
         </div>

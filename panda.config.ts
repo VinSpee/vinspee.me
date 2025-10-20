@@ -31,6 +31,13 @@ export default defineConfig({
         },
         mono: { value: 'InputMonoNarrow ExLight, monospace' },
       },
+      fontWeights: {
+        normal: { value: '400' },
+        semibold: { value: '600' }
+      },
+      lineHeights: {
+        body: { value: '1.8' }
+      },
       fontSizes: {
         's-6': { value: '8px' },
         's-5': { value: '9px' },
@@ -75,6 +82,9 @@ export default defineConfig({
         's-2': { value: '13px' },
         's-1': { value: '15px' },
       },
+      sizes: {
+        container: { value: '28rem' }
+      }
     },
     breakpoints: {
       xs: '350px',

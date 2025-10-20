@@ -43,7 +43,7 @@ const mainCls = css({
   bg: 'lightl',
   color: 'darkll',
   px: 's1',
-  lineHeight: 1.8,
+  lineHeight: 'body',
 });
 
 const innerMain = css({
@@ -60,7 +60,7 @@ const footerCls = css({
 });
 
 const footerInner = css({
-  maxW: '28rem',
+  maxW: 'container',
 });
 
 const linkCls = css({

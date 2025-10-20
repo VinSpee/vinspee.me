@@ -6,3 +6,9 @@ public
 .cache/
 .secrets.env
 yarn.lock
+
+# Qwik/Vite build outputs
+.dist/
+dist/
+.vite/
+.qwik/

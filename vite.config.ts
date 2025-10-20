@@ -13,6 +13,7 @@ export default defineConfig(() => {
         // origin: 'https://vinspee.me',
       }),
     ],
+    publicDir: 'static',
     server: {
       port: 5173,
     },

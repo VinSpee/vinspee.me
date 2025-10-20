@@ -37,7 +37,7 @@ export default component$(() => {
           <slot />
         </styled.div>
       </styled.div>
-      <styled.footer bg="light" borderTopWidth="s-6" borderColor="lightd" flex="0 0 auto">
+      <styled.footer bg="light" borderTopWidth="s-6" borderTopStyle="solid" borderColor="lightd" flex="0 0 auto">
         <styled.div maxW="container">© {new Date().getFullYear()} Vince Speelman</styled.div>
       </styled.footer>
     </styled.div>

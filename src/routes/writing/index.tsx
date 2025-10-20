@@ -77,16 +77,16 @@ export default component$(() => {
       ) : (
         <div>
           {posts.value.map((post) => (
-            <article key={post.id} style={{ marginBottom: '1.75rem' }}>
-              <header style={{ marginBottom: '0.5rem' }}>
+            <article key={post.id} class={css({ mb: 7 })}>
+              <header class={css({ mb: 2 })}>
                 <a href={post.url} target="_blank" rel="noopener noreferrer">
-                  <h2 style={{ margin: 0, fontWeight: 400, fontSize: '1.125rem' }}>{post.title}</h2>
+                  <h2 class={css({ m: 0, fontWeight: 'normal', fontSize: 'lg' })}>{post.title}</h2>
                 </a>
-                <small style={{ textTransform: 'uppercase', fontSize: '0.8rem', display: 'inline-block', width: '100%' }}>
+                <small class={css({ textTransform: 'uppercase', fontSize: 'sm', display: 'block' })}>
                   {post.published}
                 </small>
               </header>
-              <p style={{ marginTop: 0 }}>{post.subtitle}</p>
+              <p class={css({ mt: 0 })}>{post.subtitle}</p>
             </article>
           ))}
         </div>

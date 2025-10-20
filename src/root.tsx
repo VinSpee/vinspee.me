@@ -5,6 +5,7 @@ import {
   ServiceWorkerRegister,
 } from '@builder.io/qwik-city';
 import { RouterHead } from './routes/layout';
+import 'styled-system/styles.css';
 
 export default component$(() => {
   return (

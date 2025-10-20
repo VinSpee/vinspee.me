@@ -12,3 +12,6 @@ yarn.lock
 dist/
 .vite/
 .qwik/
+
+# Panda CSS generated files
+styled-system/

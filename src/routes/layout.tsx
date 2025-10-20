@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';
+import { css, cx } from 'styled-system/css';
 
 export const RouterHead = component$(() => {
   const loc = useLocation();
@@ -13,21 +14,55 @@ export const RouterHead = component$(() => {
   );
 });
 
+const container = css({
+  fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji',
+});
+
+const headerCls = css({
+  py: 4,
+  borderBottomWidth: '1px',
+  borderColor: 'gray.200',
+});
+
+const navCls = css({
+  display: 'flex',
+  gap: 4,
+});
+
+const mainCls = css({
+  p: 6,
+  maxWidth: '48rem',
+  mx: 'auto',
+});
+
+const footerCls = css({
+  py: 4,
+  borderTopWidth: '1px',
+  borderColor: 'gray.200',
+  color: 'gray.500',
+});
+
+const linkCls = css({
+  textDecoration: 'none',
+  color: 'inherit',
+  _hover: { textDecoration: 'underline' },
+});
+
 export default component$(() => {
   return (
-    <div style={{ fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji' }}>
-      <header style={{ padding: '1rem', borderBottom: '1px solid #e5e7eb' }}>
-        <nav style={{ display: 'flex', gap: '1rem' }}>
-          <Link href="/">Home</Link>
-          <Link href="/writing/">Writing</Link>
-          <Link href="/experiments/">Experiments</Link>
-          <Link href="/contact/">Contact</Link>
+    <div class={container}>
+      <header class={headerCls}>
+        <nav class={navCls}>
+          <Link class={linkCls} href="/">Home</Link>
+          <Link class={linkCls} href="/writing/">Writing</Link>
+          <Link class={linkCls} href="/experiments/">Experiments</Link>
+          <Link class={linkCls} href="/contact/">Contact</Link>
         </nav>
       </header>
-      <main style={{ padding: '1.5rem', maxWidth: '48rem', margin: '0 auto' }}>
+      <main class={mainCls}>
         <slot />
       </main>
-      <footer style={{ padding: '1rem', borderTop: '1px solid #e5e7eb', color: '#6b7280' }}>
+      <footer class={footerCls}>
         © {new Date().getFullYear()} Vince Speelman
       </footer>
     </div>

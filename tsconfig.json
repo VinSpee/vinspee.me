@@ -12,7 +12,8 @@
     "strict": true,
     "types": ["vite/client"],
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": "."
   },
-  "include": ["src"]
+  "include": ["src", "panda.config.ts"]
 }

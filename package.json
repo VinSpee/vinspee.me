@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "qwik build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"No tests configured\" && exit 0"

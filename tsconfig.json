@@ -15,5 +15,5 @@
     "resolveJsonModule": true,
     "baseUrl": "."
   },
-  "include": ["src", "panda.config.ts"]
+  "include": ["src", "panda.config.ts", "styled-system"]
 }

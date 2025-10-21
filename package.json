@@ -22,9 +22,9 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "predev": "panda codegen",
-    "prestart": "panda codegen",
-    "prebuild": "panda codegen",
+    "predev": "panda codegen && panda build",
+    "prestart": "panda codegen && panda build",
+    "prebuild": "panda codegen && panda build",
     "dev": "vite",
     "start": "vite",
     "build": "vite build",

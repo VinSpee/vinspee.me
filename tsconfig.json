@@ -13,7 +13,11 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "styled-system": ["styled-system/index"],
+      "styled-system/*": ["styled-system/*"]
+    }
   },
   "include": ["src", "panda.config.ts", "styled-system"]
 }

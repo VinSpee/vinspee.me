@@ -5,6 +5,8 @@ export default defineConfig({
   include: ['./src/**/*.{ts,tsx,js,jsx}'],
   exclude: [],
   outdir: 'styled-system',
+  jsxFramework: 'qwik',
+  jsxStyleProps: 'all',
   theme: {
     tokens: {
       colors: {

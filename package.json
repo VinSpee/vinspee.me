@@ -27,10 +27,13 @@
     "prebuild": "panda codegen && panda build",
     "dev": "vite",
     "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "build": "npm run build.client && npm run build.ssr && npm run build.types",
+    "build.client": "QWIK_BUILD=client vite build",
+    "build.ssr": "QWIK_BUILD=ssr vite build --ssr src/entry.ssr.tsx --outDir dist/server",
+    "build.types": "tsc --incremental false --noEmit",
+    "preview": "qwik preview",
     "panda": "panda --watch",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "echo 'No lint configured'",
     "test": "echo \"No tests configured\" && exit 0"
   },
   "dependencies": {

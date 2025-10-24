@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": false,
+    "lib": ["DOM", "ES2020"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@builder.io/qwik",
+    "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "strict": true,
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "styled-system": ["styled-system/index"],
+      "styled-system/*": ["styled-system/*"]
+    }
+  },
+  "include": ["src", "panda.config.ts", "styled-system"]
+}

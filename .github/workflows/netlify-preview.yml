@@ -1,0 +1,69 @@
+name: Netlify Branch Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches-ignore:
+      - main
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build
+        run: npm run build
+
+      - name: Install Netlify CLI
+        run: npm i -g netlify-cli
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Deploy Preview to Netlify
+        id: deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          OUTPUT=$(netlify deploy --dir=dist --alias="${{ github.head_ref || github.ref_name }}" --message="Preview for ${{ github.head_ref || github.ref_name }} @ ${{ github.sha }}" --json)
+          echo "$OUTPUT" > deploy.json
+          URL=$(cat deploy.json | jq -r '.url')
+          LOG_URL=$(cat deploy.json | jq -r '.logs')
+          echo "url=$URL" >> $GITHUB_OUTPUT
+          echo "log_url=$LOG_URL" >> $GITHUB_OUTPUT
+
+      - name: Comment Preview URL
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = process.env.URL
+            const logs = process.env.LOG_URL
+            const body = `🚀 Netlify Preview: ${url}\n\nLogs: ${logs}`
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            })
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+          LOG_URL: ${{ steps.deploy.outputs.log_url }}

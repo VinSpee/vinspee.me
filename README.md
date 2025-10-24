@@ -1,32 +1,65 @@
-# gatsby-starter-blog-no-styles
-[Gatsby](https://www.gatsbyjs.org/) starter for creating a blog, without the CSS and typography included in the official [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+# vinspee.me (Qwik + Qwik City)
 
-The gatsby-starter-blog makes some decisions about styling that you might not want (inline css, react-responsive-grid, gatsby-plugin-typography/compass-vertical-rhythm). 
+This repository has been migrated from a legacy Gatsby v2/React site to use Qwik and Qwik City.
 
-In my case, I want to use [Styled Components](https://www.styled-components.com/) (which Gatsby also has a [plugin](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-styled-components) for), so I ousted the aforementioned libraries and styles first and thought this no-styles starter could be useful to others.
+Why Qwik?
+- Instant, resumable hydration for great performance
+- File-based routing with Qwik City
+- Modern dev experience with Vite
 
-## Get Blogging
+## Getting started
 
-1) Install Gatsby-CLI
+- Install Node.js 18+ (recommended Node 20 LTS)
+- Install dependencies
 
-    `npm install --global gatsby-cli`
+  npm install
 
-2) Create new Gatsby project using this starter
+- Start dev server
 
-    `gatsby new my-gatsby-blog https://github.com/noahg/gatsby-starter-blog-no-styles`
+  npm run dev
 
-3) Run Development Server
+- Build for production
 
-    `gatsby develop`
+  npm run build
 
-4) Add Posts
-    
-    See the example posts in the folder `src/pages` and use the same naming convention. e.g. `/2017-09-13-post-title/index.md`
+- Preview production build
 
-5) Deploy
+  npm run preview
 
-    Follow [the Gatsby docs](https://www.gatsbyjs.org/tutorial/part-one/#deploying-gatsbyjs-websites-on-the-web) for a super easy way to deploy using surge.sh  
+## Branch preview deployments
 
+This repo is preconfigured for Netlify branch previews.
 
+Two options:
 
+1) Connect the repository in Netlify UI (recommended)
+   - Netlify will automatically build and create deploy previews for pull requests and branch pushes
+   - netlify.toml is set to build with `npm run build` and publish `dist/`
 
+2) Use GitHub Actions Netlify preview workflow
+   - Add the following GitHub repository secrets:
+     - NETLIFY_AUTH_TOKEN: your Netlify personal access token
+     - NETLIFY_SITE_ID: your Netlify Site ID
+   - The workflow .github/workflows/netlify-preview.yml will build and deploy previews for PRs and branch pushes
+
+Preview URLs will follow the pattern `<branch>--<site>.netlify.app` when using an alias.
+
+## Project structure
+
+- src/root.tsx – App root with QwikCityProvider
+- src/routes/** – File-based routes
+  - src/routes/index.tsx – Home page
+  - src/routes/writing/index.tsx – Writing placeholder
+  - src/routes/experiments/index.tsx – Experiments placeholder
+  - src/routes/contact/index.tsx – Contact page
+- src/entry.ssr.tsx – Server-side render entry
+- src/entry.dev.tsx – Dev client entry
+- src/entry.worker.ts – Service worker
+- vite.config.ts – Vite + Qwik City configuration (static adapter enabled)
+- tsconfig.json – TypeScript configuration
+
+## Notes on the migration
+
+- All Gatsby/React dependencies and scripts have been removed.
+- The previous Markdown, Medium, and GitHub data integrations are not carried over in this initial migration. They can be reintroduced using Qwik City loaders and endpoints.
+- The existing source files from the old Gatsby project remain in the repository for reference but are no longer used by the build.

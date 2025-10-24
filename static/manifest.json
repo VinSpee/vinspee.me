@@ -1,0 +1,9 @@
+{
+  "name": "vinspee.me",
+  "short_name": "vinspee",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafbfb",
+  "theme_color": "#f24432",
+  "icons": []
+}

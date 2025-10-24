@@ -2,11 +2,40 @@ import { defineConfig } from '@pandacss/dev'
 
 export default defineConfig({
   preflight: true,
-  include: ['./src/**/*.{ts,tsx,js,jsx}'],
+  include: ['src/**/*.{ts,tsx,js,jsx}'],
   exclude: [],
   outdir: 'styled-system',
   jsxFramework: 'qwik',
   jsxStyleProps: 'all',
+  presets: ['@pandacss/preset-base', '@pandacss/preset-panda'],
+  staticCss: {
+    css: [
+      { properties: { backgroundColor: ['r', 'light', 'lightl'] } },
+      { properties: { color: ['dark', 'darkll', 'light', 'inherit'] } },
+      { properties: { fontFamily: ['sans'] } },
+      { properties: { fontSize: ['s3', 's1', 's-1'] } },
+      { properties: { fontWeight: ['semibold', 'normal'] } },
+      { properties: { lineHeight: ['body'] } },
+      { properties: { display: ['flex', 'block'] } },
+      { properties: { flexDirection: ['column'] } },
+      { properties: { flex: ['0 0 auto', '1 1 auto'] } },
+      { properties: { gap: ['s1'] } },
+      { properties: { paddingInline: ['s1'] } },
+      { properties: { paddingTop: ['s5'] } },
+      { properties: { marginBottom: ['s3', 's1'] } },
+      { properties: { marginTop: ['0'] } },
+      { properties: { margin: ['0'] } },
+      { properties: { minHeight: ['100vh', '100%'] } },
+      { properties: { height: ['100%'] } },
+      { properties: { borderTopWidth: ['s-6'] } },
+      { properties: { borderTopStyle: ['solid'] } },
+      { properties: { borderColor: ['lightd'] } },
+      { properties: { maxWidth: ['container'] } },
+      { properties: { textDecoration: ['none'] } },
+      { properties: { textTransform: ['uppercase'] } },
+      { conditions: ['hover'], properties: { color: ['light'], textDecoration: ['underline'] } },
+    ],
+  },
   theme: {
     tokens: {
       colors: {
